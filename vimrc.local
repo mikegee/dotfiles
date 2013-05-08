@@ -1,0 +1,42 @@
+" Indent if we're at the beginning of a line. Else, do completion.
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+" Create directory on save if needed
+function s:MkNonExDir(file, buf)
+  if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+    let dir=fnamemodify(a:file, ':h')
+    if !isdirectory(dir)
+      call mkdir(dir, 'p')
+    endif
+ endif
+endfunction
+augroup BWCCreateDir
+  autocmd!
+  autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
+
+" automatically remove trailing whitespace on save
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+autocmd BufWritePre *.rb,*.erb,*.haml,*.slim,*.html,*.php,*.yaml,*.yml,*.css,*.scss,*.sass,*.js,*.coffee,*.rake :call <SID>StripTrailingWhitespaces()
+
+set pastetoggle=<F2>
+
+set splitbelow
+set splitright
+
+" Improve syntax highlighting
+au BufRead,BufNewFile Gemfile set filetype=ruby

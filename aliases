@@ -18,6 +18,8 @@ alias gci="git pull --rebase && rake && git push"
 
 # Bundler
 alias b="bundle"
+alias be="bundle exec"
+alias bake="bundle exec rake"
 
 # Tests and Specs
 alias t="ruby -I test"
@@ -33,3 +35,15 @@ alias m="migrate"
 alias rk="rake"
 alias s="rspec"
 alias z="zeus"
+
+# Mike's Customizations
+alias a='vi ~/.aliases; . ~/.aliases'
+
+alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2'
+
+alias install-global-gems='gem install rake autotest-fsevent autotest-growl autotest-rails-pure autotest-standalone bundler git_remote_branch && gem cleanup'
+
+# https://gist.github.com/3698238
+alias war='~/bin/weekly_activity_report | less'
+
+alias minimum_volume='osascript -e"set volume output volume 1"'
