@@ -17,6 +17,7 @@ alias v="$VISUAL"
 alias gci="git pull --rebase && rake && git push"
 alias add='git add'
 alias ci='git ci'
+alias co='git co'
 alias push='git push'
 alias pull='git pull'
 alias gd='git diff'
