@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for repo in *
+do
+  [[ -d "${repo}/.git" ]] || continue
+
+  cd "${repo}"
+
+  git branch --list --no-color | cut -c'3-' | xargs -I branch git --no-pager log --author="`git config user.name`" --format="${repo} %Credbranch%Creset %Cgreen%ar%Creset %s" 'branch@{9 days ago}..branch@{now}' 2>/dev/null
+
+  cd ..
+done
