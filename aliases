@@ -23,6 +23,8 @@ alias pull='git pull'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias rebase='git rebase'
+alias glg='git lg'
+alias pr='hub pull-request'
 
 # Bundler
 alias b="bundle"
