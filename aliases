@@ -15,6 +15,12 @@ alias v="$VISUAL"
 
 # git
 alias gci="git pull --rebase && rake && git push"
+alias add='git add'
+alias ci='git ci'
+alias push='git push'
+alias pull='git pull'
+alias gd='git diff'
+alias gdc='git diff --cached'
 
 # Bundler
 alias b="bundle"
