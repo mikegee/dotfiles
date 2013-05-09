@@ -22,6 +22,7 @@ alias push='git push'
 alias pull='git pull'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias rebase='git rebase'
 
 # Bundler
 alias b="bundle"
