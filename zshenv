@@ -1,6 +1,8 @@
 # Customize zsh here.
 # This file was not provided in thoughtbot's dotfiles
 
+export SAVEHIST=4096
+export HISTFILE=~/.history
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
