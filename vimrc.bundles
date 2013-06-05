@@ -29,4 +29,6 @@ Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'xenoterracide/html.vim'
 
+Bundle 'ecomba/vim-ruby-refactoring'
+
 filetype on
