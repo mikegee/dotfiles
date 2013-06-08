@@ -1,3 +1,6 @@
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
 " Indent if we're at the beginning of a line. Else, do completion.
 function! InsertTabWrapper()
     let col = col('.') - 1
