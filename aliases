@@ -56,6 +56,7 @@ alias install-global-gems='gem install rake autotest-fsevent autotest-growl auto
 
 alias pm='cd postmaster'
 
+alias sk='sidekiq'
 
 # https://gist.github.com/3698238
 alias war='~/bin/weekly_activity_report | less'
