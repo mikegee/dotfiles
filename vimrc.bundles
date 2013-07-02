@@ -29,6 +29,9 @@ Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'xenoterracide/html.vim'
 
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'FredKSchott/CoVim'
 
 filetype on
