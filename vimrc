@@ -81,7 +81,7 @@ let g:snippetsEmu_key = "<S-Tab>"
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
-set complete=.,w,t
+" set complete=.,w,t
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'
