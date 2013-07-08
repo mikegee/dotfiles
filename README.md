@@ -90,6 +90,8 @@ configuration:
 * Adds a `create-branch` alias to create feature branches.
 * Adds a `delete-branch` alias to delete feature branches.
 * Adds a `merge-branch` alias to merge feature branches into master.
+* Adds an `up` alias to fetch and rebase `origin/master` into the feature
+  branch. Use `git up -i` for interactive rebases.
 
 Shell aliases and scripts:
 
@@ -110,6 +112,9 @@ Credits
 -------
 
 Thank you, [contributors](https://github.com/thoughtbot/dotfiles/contributors)!
+Also, thank you to Corey Haines, Gary Bernhardt, and others for sharing your
+dotfiles and other shell scripts from which we derived inspiration for items
+in this project.
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 

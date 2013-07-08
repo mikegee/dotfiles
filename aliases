@@ -47,18 +47,5 @@ alias rk="rake"
 alias s="rspec"
 alias z="zeus"
 
-# Mike's Customizations
-alias a='vi ~/.aliases; . ~/.aliases'
-
-alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2'
-
-alias install-global-gems='gem install rake autotest-fsevent autotest-growl autotest-rails-pure autotest-standalone bundler git_remote_branch && gem cleanup'
-
-alias pm='cd postmaster'
-
-alias sk='sidekiq'
-
-# https://gist.github.com/3698238
-alias war='~/bin/weekly_activity_report | less'
-
-alias minimum_volume='osascript -e"set volume output volume 1"'
+# Include custom aliases
+[[ -f .aliases.local ]] && source ~/.aliases.local
