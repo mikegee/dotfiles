@@ -2,6 +2,8 @@ alias a='vi ~/.aliases.local; . ~/.aliases.local'
 
 alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2'
 
+alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2' "
+
 alias install-global-gems='gem install rake autotest-fsevent autotest-growl autotest-rails-pure autotest-standalone bundler git_remote_branch && gem cleanup'
 
 alias pm='cd postmaster'
