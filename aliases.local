@@ -14,3 +14,20 @@ alias sk='sidekiq'
 alias war='~/bin/weekly_activity_report | less'
 
 alias minimum_volume='osascript -e"set volume output volume 1"'
+
+# git
+alias add='git add --all'
+alias ci='git ci'
+alias co='git co'
+alias push='git push'
+alias pull='git pull'
+alias gp='git pull'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias rebase='git rebase'
+alias glg='git lg'
+alias pr='hub pull-request'
+
+# Bundler
+alias be="bundle exec"
+alias bake="bundle exec rake"

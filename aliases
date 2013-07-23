@@ -15,22 +15,9 @@ alias v="$VISUAL"
 
 # git
 alias gci="git pull --rebase && rake && git push"
-alias add='git add --all'
-alias ci='git ci'
-alias co='git co'
-alias push='git push'
-alias pull='git pull'
-alias gp='git pull'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias rebase='git rebase'
-alias glg='git lg'
-alias pr='hub pull-request'
 
 # Bundler
 alias b="bundle"
-alias be="bundle exec"
-alias bake="bundle exec rake"
 
 # Tests and Specs
 alias t="ruby -I test"
