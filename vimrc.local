@@ -29,7 +29,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 " Create directory on save if needed
-function s:MkNonExDir(file, buf)
+function! s:MkNonExDir(file, buf)
   if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
     let dir=fnamemodify(a:file, ':h')
     if !isdirectory(dir)
@@ -43,7 +43,7 @@ augroup BWCCreateDir
 augroup END
 
 " automatically remove trailing whitespace on save
-fun! <SID>StripTrailingWhitespaces()
+function! <SID>StripTrailingWhitespaces()
   let l = line(".")
   let c = col(".")
   %s/\s\+$//e
