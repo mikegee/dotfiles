@@ -1,11 +1,16 @@
+" Change CtrlP selection behavior
+" Enter to open the file in a new tab, Ctrl-t to reuse current tab
+" (opposite of the defaults)
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
+" relative line numbers in Normal Mode
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
+" don't use arrow keys in Insert Mode
 inoremap <Left>  <NOP>
 inoremap <Right> <NOP>
 inoremap <Up>    <NOP>
@@ -46,6 +51,7 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre *.rb,*.erb,*.haml,*.slim,*.html,*.php,*.yaml,*.yml,*.css,*.scss,*.sass,*.js,*.coffee,*.rake :call <SID>StripTrailingWhitespaces()
 
+" :set paste and :set nopaste via F2
 set pastetoggle=<F2>
 
 set splitbelow
@@ -54,5 +60,6 @@ set splitright
 " Improve syntax highlighting
 au BufRead,BufNewFile Gemfile,Guardfile set filetype=ruby
 
+" Move to adjacent tabs with H and L
 map <S-h> gT
 map <S-l> gt
