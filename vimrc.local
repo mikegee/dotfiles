@@ -1,3 +1,23 @@
+map <Leader>ra :%s/
+
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+
+" Ctrl-W to write to disk
+map  <c-w> :write<cr>
+imap <c-w> <c-o>:write<cr>
+
+" Move to adjacent tabs with H and L
+map <S-h> gT
+map <S-l> gt
+
+" Make editing my vimrc easier
+map <Leader>ev :tabedit ~/.vimrc.local<cr>
+map <Leader>sv :source ~/.vimrc.local<cr>
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
 " Change CtrlP selection behavior
 " Enter to open the file in a new tab, Ctrl-t to reuse current tab
 " (opposite of the defaults)
@@ -59,7 +79,3 @@ set splitright
 
 " Improve syntax highlighting
 au BufRead,BufNewFile Gemfile,Guardfile set filetype=ruby
-
-" Move to adjacent tabs with H and L
-map <S-h> gT
-map <S-l> gt
