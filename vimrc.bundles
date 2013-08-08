@@ -33,5 +33,6 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'FredKSchott/CoVim'
+Bundle 'rking/ag.vim'
 
 filetype on
