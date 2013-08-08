@@ -42,6 +42,7 @@ augroup vimrcEx
   autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
 
   " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
 
   " Enable spellchecking for Markdown
