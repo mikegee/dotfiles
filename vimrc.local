@@ -8,8 +8,8 @@ map  <c-w> :write<cr>
 imap <c-w> <c-o>:write<cr>
 
 " Move to adjacent tabs with H and L
-map <S-h> gT
-map <S-l> gt
+map <c-h> gT
+map <c-l> gt
 
 " Make editing my vimrc easier
 map <Leader>ev :tabedit ~/.vimrc.local<cr>
