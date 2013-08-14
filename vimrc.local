@@ -62,14 +62,8 @@ augroup BWCCreateDir
   autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
 
-" automatically remove trailing whitespace on save
-function! <SID>StripTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  call cursor(l, c)
-endfun
-autocmd BufWritePre *.rb,*.erb,*.haml,*.slim,*.html,*.php,*.yaml,*.yml,*.css,*.scss,*.sass,*.js,*.coffee,*.rake :call <SID>StripTrailingWhitespaces()
+" automatically remove trailing whitespace on save with trailertrash plugin
+autocmd BufWritePre * :Trim
 
 " :set paste and :set nopaste via F2
 set pastetoggle=<F2>
