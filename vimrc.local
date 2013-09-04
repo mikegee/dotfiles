@@ -1,11 +1,34 @@
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'))
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <Leader>n :call RenameFile()<cr>
+
+" Escape is far away, just hit j and k at the same time!
+imap kj <Esc>
+imap jk <Esc>
+
+" Start scrolling 3 lines before the border
+set scrolloff=3
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
 map <Leader>ra :%s/
 
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
 
-" Ctrl-W to write to disk
-map  <c-w> :write<cr>
-imap <c-w> <c-o>:write<cr>
+" Quicker writes
+map <Leader>w :write<cr>
+map  ww :write<cr>
+imap ww <c-o>:write<cr>
 
 " Move to adjacent tabs with H and L
 map <c-h> gT
@@ -64,6 +87,9 @@ augroup END
 
 " automatically remove trailing whitespace on save with trailertrash plugin
 autocmd BufWritePre * :Trim
+
+" don't show trailing whitespace when committing
+let g:trailertrash_blacklist = ['.git/COMMIT_EDITMSG']
 
 " :set paste and :set nopaste via F2
 set pastetoggle=<F2>
