@@ -31,3 +31,6 @@ alias pr='hub pull-request'
 # Bundler
 alias be="bundle exec"
 alias bake="bundle exec rake"
+
+# Edit multiple files in tabs
+alias vi="vi -p"
