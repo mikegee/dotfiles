@@ -29,8 +29,6 @@ imap <c-a> <c-o>^
 
 " Quicker writes
 map <Leader>w :write<cr>
-map  ww :write<cr>
-imap ww <c-o>:write<cr>
 
 " Move to adjacent tabs with H and L
 map <c-h> gT
