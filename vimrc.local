@@ -1,3 +1,5 @@
+map <Leader>bp Obinding.pry<ESC>:write<CR>
+
 function! RenameFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'))
