@@ -1,3 +1,17 @@
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a> :Tabularize /=><CR>
+  vmap <Leader>a> :Tabularize /=><CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+  nmap <Leader>a{ :Tabularize / \zs{<CR>
+  vmap <Leader>a{ :Tabularize / \zs{<CR>
+endif
+
+" Make Y behave consistently with D and C
+map Y y$
+
 map <Leader>bp Obinding.pry<ESC>:write<CR>
 
 function! RenameFile()
@@ -45,9 +59,9 @@ set backspace=indent,eol,start
 " Enter to open the file in a new tab, Ctrl-t to reuse current tab
 " (opposite of the defaults)
 let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
+      \ 'AcceptSelection("e")': ['<c-t>'],
+      \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+      \ }
 
 " relative line numbers in Normal Mode
 autocmd InsertEnter * :set number
@@ -61,12 +75,12 @@ inoremap <Down>  <NOP>
 
 " Indent if we're at the beginning of a line. Else, do completion.
 function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
@@ -78,7 +92,7 @@ function! s:MkNonExDir(file, buf)
     if !isdirectory(dir)
       call mkdir(dir, 'p')
     endif
- endif
+  endif
 endfunction
 augroup BWCCreateDir
   autocmd!
