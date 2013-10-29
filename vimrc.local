@@ -1,13 +1,22 @@
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a> :Tabularize /=><CR>
-  vmap <Leader>a> :Tabularize /=><CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-  nmap <Leader>a{ :Tabularize / \zs{<CR>
-  vmap <Leader>a{ :Tabularize / \zs{<CR>
-endif
+map <Leader>k :cg quickfix.out \| cwindow <CR>
+
+" convert single to double quotes
+map <Leader>dq :%s/'/"/g \| write <CR>
+
+let rails_buffer_helper='spring'
+
+" Fix common typo
+iab recieve receive
+
+" Alignment macros
+nmap <Leader>a= :Tabularize /=/ <CR>
+vmap <Leader>a= :Tabularize /=/ <CR>
+nmap <Leader>a> :Tabularize /=>/ <CR>
+vmap <Leader>a> :Tabularize /=>/ <CR>
+nmap <Leader>a: :Tabularize /:\zs/ <CR>
+vmap <Leader>a: :Tabularize /:\zs/ <CR>
+nmap <Leader>a{ :Tabularize / \zs{/ <CR>
+vmap <Leader>a{ :Tabularize / \zs{/ <CR>
 
 " Make Y behave consistently with D and C
 map Y y$
@@ -52,9 +61,6 @@ map <c-l> gt
 map <Leader>ev :tabedit ~/.vimrc.local<cr>
 map <Leader>sv :source ~/.vimrc.local<cr>
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
 " Change CtrlP selection behavior
 " Enter to open the file in a new tab, Ctrl-t to reuse current tab
 " (opposite of the defaults)
@@ -62,10 +68,6 @@ let g:ctrlp_prompt_mappings = {
       \ 'AcceptSelection("e")': ['<c-t>'],
       \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
       \ }
-
-" relative line numbers in Normal Mode
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
 
 " don't use arrow keys in Insert Mode
 inoremap <Left>  <NOP>
