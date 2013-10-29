@@ -24,10 +24,3 @@ if [ -d $HOME/bin ]; then
 fi
 
 cdpath=( $HOME/Projects $HOME/Projects/cmm )
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# Include RVM
-if [ -e "$HOME/.rvm/scripts/rvm" ]; then
-  source "$HOME/.rvm/scripts/rvm"
-fi
