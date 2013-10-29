@@ -34,5 +34,8 @@ alias pop='git stash pop'
 alias be="bundle exec"
 alias bake="bundle exec rake"
 
+alias ber="bundle exec rspec"
+alias beg="bundle exec guard"
+
 # Edit multiple files in tabs
 alias vi="vi -p"
