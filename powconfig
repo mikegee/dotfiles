@@ -1,1 +1,3 @@
 export POW_TIMEOUT=7200
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
