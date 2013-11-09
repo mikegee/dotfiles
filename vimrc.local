@@ -3,7 +3,7 @@ map <Leader>k :cg quickfix.out \| cwindow <CR>
 " convert single to double quotes
 map <Leader>dq :%s/'/"/g \| write <CR>
 
-let rails_buffer_helper='spring'
+let rails_buffer_helper='source /usr/local/opt/chruby/share/chruby/chruby.sh; chruby `cat .ruby-version`; spring'
 
 " Fix common typo
 iab recieve receive
