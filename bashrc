@@ -1,1 +1,2 @@
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
