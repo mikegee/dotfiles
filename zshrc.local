@@ -1,2 +1,20 @@
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
+
+export SAVEHIST=4096
+export HISTFILE=~/.history
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+
+# makes color constants available
+autoload -U colors
+colors
+
+# enable colored output from ls, etc
+export CLICOLOR=1
+
+export PATH="./bin:./script:$HOME/bin:/usr/local/bin:$PATH"
+
+cdpath=( $HOME/Projects $HOME/Projects/cmm )
+
+export SHELL=/usr/local/bin/zsh
