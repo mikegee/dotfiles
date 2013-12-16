@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# Create new git tag and push it to 'origin'.
+#
+# Usage:
+#   tag v3.2.1
+
+git tag $1
+git push origin --tags
