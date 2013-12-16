@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for repo in ~/Projects/cmm/*
+do
+  [[ -d "${repo}/.git" ]] || continue
+
+  cd "${repo}"
+
+  git config --unset user.name
+  git config user.email mgee@innova-partners.com
+  git config github.user mgee
+
+  cd ..
+done
