@@ -30,7 +30,7 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias rebase='git rebase'
 alias glg='git lg'
-alias pr='hub pull-request'
+alias pr='git push && hub pull-request'
 alias stash='git stash'
 alias pop='git stash pop'
 
