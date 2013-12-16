@@ -1,5 +1,5 @@
 [user]
-  name = mikegee
+  name = Michael Gee
   email = michaelpgee@gmail.com
 
 [github]
@@ -10,7 +10,7 @@
 
 [log]
   abbrevCommit = true
- 
+
 [push]
   default = simple
 
