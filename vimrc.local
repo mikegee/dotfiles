@@ -119,4 +119,4 @@ set splitbelow
 set splitright
 
 " Improve syntax highlighting
-au BufRead,BufNewFile Gemfile,Guardfile set filetype=ruby
+au BufRead,BufNewFile Gemfile,Guardfile,*.pill set filetype=ruby
