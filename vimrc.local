@@ -1,3 +1,5 @@
+let g:github_api_url = "http://git.innova-partners.com/api/v3"
+
 map <Leader>k :cg quickfix.out \| cwindow <CR>
 
 " convert single to double quotes
