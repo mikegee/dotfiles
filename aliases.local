@@ -1,3 +1,7 @@
+alias ruby-install='~/Projects/ruby-install/bin/ruby-install'
+
+alias pp='ruby -rap -rjson -e "ap JSON.parse(STDIN.read), indent: 2"'
+
 alias a='vi ~/.aliases.local; . ~/.aliases.local'
 
 alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2'
