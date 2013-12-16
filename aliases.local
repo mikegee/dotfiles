@@ -33,6 +33,7 @@ alias glg='git lg'
 alias pr='git push && hub pull-request'
 alias stash='git stash'
 alias pop='git stash pop'
+alias unstage='git reset HEAD'
 
 # Bundler
 alias be="bundle exec"
