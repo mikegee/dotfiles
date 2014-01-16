@@ -1,4 +1,5 @@
-alias ruby-install='~/Projects/ruby-install/bin/ruby-install'
+alias rc='./script/rails console'
+alias rs='./script/rails server'
 
 alias pp='ruby -rap -rjson -e "ap JSON.parse(STDIN.read), indent: 2"'
 
@@ -8,11 +9,9 @@ alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-
 
 alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2' "
 
-alias install-global-gems='gem install rake autotest-fsevent autotest-growl autotest-rails-pure autotest-standalone bundler git_remote_branch && gem cleanup'
-
 alias pm='cd postmaster'
 
-alias sk='sidekiq'
+alias sk='bundle exec sidekiq'
 
 # https://gist.github.com/3698238
 alias war='~/bin/weekly_activity_report | less'
@@ -20,6 +19,7 @@ alias war='~/bin/weekly_activity_report | less'
 alias minimum_volume='osascript -e"set volume output volume 1"'
 
 # git
+alias gs='git status'
 alias add='git add --all'
 alias ci='git ci'
 alias co='git co'
@@ -34,6 +34,7 @@ alias pr='git push && hub pull-request'
 alias stash='git stash'
 alias pop='git stash pop'
 alias unstage='git reset HEAD'
+alias br='git branch'
 
 # Bundler
 alias be="bundle exec"
