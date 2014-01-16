@@ -1,3 +1,7 @@
+map <Leader>q :quit <CR>
+
+autocmd BufNewFile *_spec.rb read ~/.vim/skeleton_spec.rb | 0d
+
 let g:github_api_url = "http://git.innova-partners.com/api/v3"
 
 map <Leader>k :cg quickfix.out \| cwindow <CR>
@@ -40,8 +44,8 @@ endfunction
 map <Leader>n :call RenameFile()<cr>
 
 " Escape is far away, just hit j and k at the same time!
-imap kj <Esc>
-imap jk <Esc>
+inoremap kj <Esc>
+inoremap jk <Esc>
 
 " Start scrolling 3 lines before the border
 set scrolloff=3
