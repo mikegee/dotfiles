@@ -64,7 +64,9 @@ imap <c-a> <c-o>^
 " Quicker writes
 map <Leader>w :write<cr>
 
-" Move to adjacent tabs with H and L
+" Move to adjacent tabs with H & L or ^h & ^l
+nmap H gT
+nmap L gt
 map <c-h> gT
 map <c-l> gt
 
