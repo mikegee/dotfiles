@@ -1,3 +1,7 @@
+alias ttr="touch tmp/restart.txt; curl --silent http://`basename $PWD`.dev > /dev/null & tail -fn0 log/development.log"
+
+alias pstree='pstree $PPID'
+
 alias rc='./script/rails console'
 alias rs='./script/rails server'
 
