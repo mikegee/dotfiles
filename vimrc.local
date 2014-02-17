@@ -1,3 +1,5 @@
+map <Leader>let :s/\(\S*\)\s*=\(.*\)/let(:\1) {\2 }/<CR> \| :normal ==<CR>
+
 map <Leader>q :quit <CR>
 
 autocmd BufNewFile *_spec.rb read ~/.vim/skeleton_spec.rb | 0d
