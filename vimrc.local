@@ -1,8 +1,24 @@
+" disable loading syntastic's rubocop checker by marking it as already loaded.
+let g:loaded_syntastic_ruby_rubocop_checker = 1
+
+let g:spring = "spring"
+let g:rspec_command = "!echo ".g:spring." rspec {spec}; ".g:spring." rspec {spec}"
+
 map <Leader>let :s/\(\S*\)\s*=\(.*\)/let(:\1) {\2 }/<CR> \| :normal ==<CR>
 
 map <Leader>q :quit <CR>
 
-autocmd BufNewFile *_spec.rb read ~/.vim/skeleton_spec.rb | 0d
+augroup EditPasteBuffer
+  autocmd!
+  autocmd BufReadPre ~/.pastebuffer set noeol binary
+  autocmd BufReadPost ~/.pastebuffer execute "normal ggdG:read !pbpaste\<CR>ggdd"
+  autocmd BufWritePost ~/.pastebuffer silent write !pbcopy
+augroup END
+
+augroup NewSpecFile
+  autocmd!
+  autocmd BufNewFile *_spec.rb read ~/.vim/skeleton_spec.rb | 0d
+augroup END
 
 let g:github_api_url = "http://git.innova-partners.com/api/v3"
 
@@ -15,6 +31,9 @@ let rails_buffer_helper='source /usr/local/opt/chruby/share/chruby/chruby.sh; ch
 
 " Fix common typo
 iab recieve receive
+
+" Shortcut for uuid
+iab ü SecureRandom.uuid
 
 " Alignment macros
 nmap <Leader>a= :Tabularize /=\(>\)\@!<CR>
@@ -33,6 +52,16 @@ cmap Gc Gcommit
 map Y y$
 
 map <Leader>bp Obinding.pry<ESC>:write<CR>
+
+function! BackgroundBundle()
+  let bundle         = 'bundle > log/bundle.log'
+  let growl_success  = 'growlnotify bundle -m completed'
+  let growl_failure  = 'cat log/bundle.log | growlnotify bundle failed'
+  let cmd            = bundle . ' && ' . growl_success . ' || ' . growl_failure
+  let background_cmd = '(' . cmd . ') &'
+  let _              = system(background_cmd)
+endfunction
+map <Leader>b :call BackgroundBundle()<CR>
 
 function! RenameFile()
   let old_name = expand('%')
@@ -115,7 +144,10 @@ augroup BWCCreateDir
 augroup END
 
 " automatically remove trailing whitespace on save with trailertrash plugin
-autocmd BufWritePre * :Trim
+augroup TrailerTrash
+  autocmd!
+  autocmd BufWritePre * :Trim
+augroup END
 
 " don't show trailing whitespace when committing
 let g:trailertrash_blacklist = ['.git/COMMIT_EDITMSG']
@@ -127,4 +159,7 @@ set splitbelow
 set splitright
 
 " Improve syntax highlighting
-au BufRead,BufNewFile Gemfile,Guardfile,*.pill set filetype=ruby
+augroup RubyFilesNotEndingInRB
+  autocmd!
+  autocmd BufRead,BufNewFile Gemfile,Guardfile,*.pill set filetype=ruby
+augroup END
