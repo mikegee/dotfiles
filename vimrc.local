@@ -7,6 +7,8 @@ let g:spring = "spring"
 let g:rspec_command = "!echo ".g:spring." rspec {spec}; ".g:spring." rspec {spec}"
 
 map <Leader>let :s/\(\S*\)\s*=\(.*\)/let(:\1) {\2 }/<CR> \| :normal ==<CR>
+map <Leader>unlet :s/let(:\(\S*\))\s*{\(.*\) }/\1 =\2/<CR> \| :normal ==<CR>
+map <Leader>unlet :normal df:f)cf{ =$xx==
 
 map <Leader>q :quit <CR>
 
