@@ -1,6 +1,6 @@
 rspec() {
-  if [ -S tmp/spring/spring ]; then
-    bundle exec spring rspec "$@"
+  if [ -e config/application.rb ]; then
+    spring rspec "$@"
   else
     bundle exec rspec "$@"
   fi

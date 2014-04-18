@@ -1,0 +1,22 @@
+#!/usr/local/bin/zsh
+
+wrench_file="$HOME/.wrench"
+
+rm -f  $wrench_file
+mkfifo $wrench_file
+
+cleanup()
+{
+  rm -f $wrench_file
+  exit $?
+}
+trap cleanup SIGINT
+
+echo Put commands into $wrench_file, and I will run them for you!
+
+while true; do
+  command="`cat $wrench_file`"
+  clear
+  echo Running: $command
+  /usr/local/bin/zsh -i -c "$command"
+done

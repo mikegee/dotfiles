@@ -3,8 +3,10 @@ let g:airline_powerline_fonts = 1
 " disable loading syntastic's rubocop checker by marking it as already loaded.
 let g:loaded_syntastic_ruby_rubocop_checker = 1
 
-let g:spring = "spring"
-let g:rspec_command = "!echo ".g:spring." rspec {spec}; ".g:spring." rspec {spec}"
+let rspec_command = "rspec {spec} --require=support/vim_formatter.rb --format VimFormatter --out quickfix.out --format progress"
+
+let g:rspec_command = "echom system('echo \"" . rspec_command . "\" >> ~/.wrench')"
+map <Leader>fun :echom system('echo ./script/development_functional_spec >> ~/.wrench')<CR>
 
 map <Leader>let :s/\(\S*\)\s*=\(.*\)/let(:\1) {\2 }/<CR> \| :normal ==<CR>
 map <Leader>unlet :s/let(:\(\S*\))\s*{\(.*\) }/\1 =\2/<CR> \| :normal ==<CR>
