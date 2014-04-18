@@ -1,8 +1,11 @@
+" Use Vim settings, rather then Vi settings. This setting must be as early as
+" possible, as it has side effects.
+set nocompatible
+
 " Leader
 let mapleader = " "
 
 set backspace=2   " Backspace deletes like most programs in insert mode
-set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
@@ -83,14 +86,10 @@ highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set number
 set numberwidth=5
 
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
-
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
-" set complete=.,w,t
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'
