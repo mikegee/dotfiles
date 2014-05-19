@@ -1,7 +1,0 @@
-rspec() {
-  if [ -e config/application.rb ]; then
-    spring rspec "$@"
-  else
-    bundle exec rspec "$@"
-  fi
-}

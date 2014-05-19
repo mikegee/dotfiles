@@ -10,10 +10,12 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
+Bundle 'christoomey/vim-run-interactive'
 Bundle 'croaky/vim-colors-github'
 Bundle 'danro/rename.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
+Bundle 'pbrisbin/vim-mkdir'
 Bundle 'scrooloose/syntastic'
 Bundle 'slim-template/vim-slim'
 Bundle 'thoughtbot/vim-rspec'

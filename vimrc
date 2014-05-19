@@ -60,6 +60,7 @@ augroup END
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
+set shiftround
 set expandtab
 
 " Display extra whitespace
@@ -120,6 +121,9 @@ nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>a :call RunAllSpecs()<CR>
+
+" Run commands that require an interactive shell
+nnoremap <Leader>r :RunInInteractiveShell<space>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'

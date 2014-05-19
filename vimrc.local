@@ -1,3 +1,11 @@
+call matchadd('ColorColumn', '\%101v.\+', 100)
+
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_rails = 1
+
+set noautowrite " I don't know why thoughtbotters think autowrite is good.
+
 let g:airline_powerline_fonts = 1
 
 " disable loading syntastic's rubocop checker by marking it as already loaded.
@@ -8,9 +16,22 @@ let rspec_command = "rspec {spec} --require=support/vim_formatter.rb --format Vi
 let g:rspec_command = "echom system('echo \"" . rspec_command . "\" >> ~/.wrench')"
 map <Leader>fun :echom system('echo ./script/development_functional_spec >> ~/.wrench')<CR>
 
+" function! MapCR()
+"   if &buftype == "quickfix"
+"     unmap <CR>
+"   else
+"     nnoremap <CR> :call RunCurrentSpecFile()<CR>
+"   endif
+" endfunction
+"
+" augroup MapCR
+"   autocmd!
+"   autocmd BufWinEnter * :call MapCR()
+" augroup END
+
 map <Leader>let :s/\(\S*\)\s*=\(.*\)/let(:\1) {\2 }/<CR> \| :normal ==<CR>
 map <Leader>unlet :s/let(:\(\S*\))\s*{\(.*\) }/\1 =\2/<CR> \| :normal ==<CR>
-map <Leader>unlet :normal df:f)cf{ =$xx==
+map <Leader>unlet :normal ^df:f)cf{ =$xx==
 
 map <Leader>q :quit <CR>
 
@@ -68,6 +89,7 @@ function! BackgroundBundle()
   let _              = system(background_cmd)
 endfunction
 map <Leader>b :call BackgroundBundle()<CR>
+map <Leader>b :echom system('echo bundle >> ~/.wrench')<CR>
 
 function! RenameFile()
   let old_name = expand('%')
@@ -79,10 +101,6 @@ function! RenameFile()
   endif
 endfunction
 map <Leader>n :call RenameFile()<cr>
-
-" Escape is far away, just hit j and k at the same time!
-inoremap kj <Esc>
-inoremap jk <Esc>
 
 " Start scrolling 3 lines before the border
 set scrolloff=3
@@ -106,8 +124,8 @@ map <c-h> gT
 map <c-l> gt
 
 " Make editing my vimrc easier
-map <Leader>ev :tabedit ~/.vimrc.local<cr>
-map <Leader>sv :source ~/.vimrc.local<cr>
+map <Leader>ev :tabedit ~/.vimrc.local<CR>
+map <Leader>sv :source ~/.vimrc<CR>
 
 " Change CtrlP selection behavior
 " Enter to open the file in a new tab, Ctrl-t to reuse current tab
@@ -134,20 +152,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
-
-" Create directory on save if needed
-function! s:MkNonExDir(file, buf)
-  if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
-    let dir=fnamemodify(a:file, ':h')
-    if !isdirectory(dir)
-      call mkdir(dir, 'p')
-    endif
-  endif
-endfunction
-augroup BWCCreateDir
-  autocmd!
-  autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
-augroup END
 
 " automatically remove trailing whitespace on save with trailertrash plugin
 augroup TrailerTrash
