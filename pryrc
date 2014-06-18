@@ -3,7 +3,7 @@ def model(table)
 end
 
 def me
-  @me ||= User.where("username = ? OR username = ?", "mgee", "mgee_internal").first
+  @me ||= User.find_by_email("mgee@covermymeds.com") || User.where("username = ? OR username = ?", "mgee", "mgee_internal").first
 end
 
 def pbcopy(str)
