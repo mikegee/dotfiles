@@ -1,5 +1,5 @@
 POST /servers HTTP/1.1
-Content-Length: 31
+Content-Length: 61
 
-edit zsh 44 100
-spec zsh 74 99
+edit /usr/local/bin/zsh 44 100
+spec /usr/local/bin/zsh 74 99
