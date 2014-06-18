@@ -48,8 +48,14 @@ alias br='git branch'
 alias be="bundle exec"
 alias bake="bundle exec rake"
 
-alias ber="bundle exec rspec"
 alias beg="bundle exec guard"
+
+alias ber="bundle exec rspec"
+alias bec="bundle exec cucumber"
 
 # Edit multiple files in tabs
 alias vi="vi -p"
+
+alias spring!="spring stop"
+
+alias gi="gem install"
