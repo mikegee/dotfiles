@@ -20,6 +20,8 @@ export PATH="./bin:./script:$HOME/bin:/usr/local/bin:$PATH"
 
 cdpath=( $HOME/Projects $HOME/Projects/cmm )
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 export SHELL=/usr/local/bin/zsh
 
 ssh-add ~/.ssh/id_rsa 2>/dev/null
