@@ -18,6 +18,7 @@ alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-
 alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2' "
 
 alias pm='cd postmaster'
+alias eg='cd epa_gateway'
 
 alias sk='bundle exec sidekiq'
 
