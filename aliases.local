@@ -2,7 +2,7 @@ alias vipb="vi ~/.pastebuffer"
 
 alias kick_ferret="ssh deployer@xanadunode1 'kill \`cat /pub/prod/ferret.covermymeds.com/shared/pids/clockwork.pid\`'"
 
-alias ttr="touch tmp/restart.txt; curl --silent http://`basename $PWD`.dev > /dev/null & tail -fn0 log/development.log"
+alias ttr="touch tmp/restart.txt; curl --silent http://`basename $PWD`.dev > /dev/null"
 
 alias pstree='pstree $PPID'
 
