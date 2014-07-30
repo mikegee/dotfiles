@@ -13,10 +13,10 @@ let g:airline_powerline_fonts = 1
 " disable loading syntastic's rubocop checker by marking it as already loaded.
 let g:loaded_syntastic_ruby_rubocop_checker = 1
 
-let rspec_command = "rspec {spec} --require=support/vim_formatter.rb --format VimFormatter --out quickfix.out --format progress"
+let g:rspec_command = "!spring rspec {spec}"
 
-let g:rspec_command = "echom system('echo \"" . rspec_command . "\" >> ~/.wrench')"
-map <Leader>fun :echom system('echo ./script/development_functional_spec >> ~/.wrench')<CR>
+" let g:rspec_command = "echom system('echo \"" . rspec_command . "\" >> ~/.wrench')"
+" map <Leader>fun :echom system('echo ./script/development_functional_spec >> ~/.wrench')<CR>
 
 " function! MapCR()
 "   if &buftype == "quickfix"
@@ -91,7 +91,7 @@ function! BackgroundBundle()
   let _              = system(background_cmd)
 endfunction
 map <Leader>b :call BackgroundBundle()<CR>
-map <Leader>b :echom system('echo bundle >> ~/.wrench')<CR>
+" map <Leader>b :echom system('echo bundle >> ~/.wrench')<CR>
 
 function! RenameFile()
   let old_name = expand('%')
