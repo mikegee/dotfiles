@@ -48,6 +48,7 @@ alias br='git branch'
 # Bundler
 alias be="bundle exec"
 alias bake="bundle exec rake"
+alias buby="bundle exec ruby"
 
 alias beg="bundle exec guard"
 
