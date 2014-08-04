@@ -16,8 +16,6 @@ colors
 # enable colored output from ls, etc
 export CLICOLOR=1
 
-export PATH="./bin:./script:$HOME/bin:/usr/local/bin:$PATH"
-
 cdpath=( $HOME/Projects $HOME/Projects/cmm )
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
