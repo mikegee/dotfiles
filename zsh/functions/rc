@@ -1,0 +1,9 @@
+# Rails console
+
+rc() {
+  if [ -e bin/rails ]; then
+    bin/rails console $@
+  else
+    script/rails console $@
+  fi
+}

@@ -6,9 +6,6 @@ alias ttr="touch tmp/restart.txt; curl --silent http://`basename $PWD`.dev > /de
 
 alias pstree='pstree $PPID'
 
-alias rc='./script/rails console'
-alias rs='./script/rails server'
-
 alias pp='ruby -rap -rjson -e "ap JSON.parse(STDIN.read), indent: 2"'
 
 alias a='vi ~/.aliases.local; . ~/.aliases.local'
