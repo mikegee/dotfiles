@@ -52,6 +52,7 @@ Put your customizations in dotfiles appended with `.local`:
 * `~/.tmux.conf.local`
 * `~/.vimrc.local`
 * `~/.vimrc.bundles.local`
+* `~/.zshenv.local`
 * `~/.zshrc.local`
 * `~/.zsh/configs/*`
 
@@ -69,6 +70,13 @@ Your `~/.gitconfig.local` might look like this:
     [user]
       name = Dan Croak
       email = dan@thoughtbot.com
+
+Your `~/.zshenv.local` might look like this:
+
+    # load pyenv if available
+    if which pyenv &>/dev/null ; then
+      eval "$(pyenv init -)"
+    fi
 
 Your `~/.zshrc.local` might look like this:
 
@@ -142,6 +150,8 @@ What's in it?
   available.
 * Use [Exuberant Ctags](http://ctags.sourceforge.net/) for tab completion.
 * Use [GitHub color scheme](https://github.com/croaky/vim-colors-github).
+* Use [vim-mkdir](https://github.com/pbrisbin/vim-mkdir) for automatically
+  creating non-existing directories before writing the buffer.
 * Use [Vundle](https://github.com/gmarik/Vundle.vim) to manage plugins.
 
 [tmux](http://robots.thoughtbot.com/a-tmux-crash-course)

@@ -57,21 +57,6 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
-# use vim as the visual editor
-export VISUAL=vim
-export EDITOR=$VISUAL
-
-# ensure dotfiles bin directory is loaded first
-export PATH="$HOME/.bin:/usr/local/bin:$PATH"
-
-# load rbenv if available
-if which rbenv &>/dev/null ; then
-  eval "$(rbenv init - --no-rehash)"
-fi
-
-# mkdir .git/safe in the root of repositories you trust
-export PATH=".git/safe/../../bin:$PATH"
-
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
@@ -81,12 +66,12 @@ _load_settings() {
   _dir="$1"
   if [ -d "$_dir" ]; then
     if [ -d "$_dir/pre" ]; then
-      for config in "$_dir"/pre/**/(N-.); do
+      for config in "$_dir"/pre/**/*(N-.); do
         . $config
       done
     fi
 
-    for config in "$_dir"/**/(N-.); do
+    for config in "$_dir"/**/*(N-.); do
       case "$config" in
         "$_dir"/pre/*)
           :
@@ -103,7 +88,7 @@ _load_settings() {
     done
 
     if [ -d "$_dir/post" ]; then
-      for config in "$_dir"/post/**/(N-.); do
+      for config in "$_dir"/post/**/*(N-.); do
         . $config
       done
     fi
