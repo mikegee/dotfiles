@@ -1,7 +1,6 @@
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'FredKSchott/CoVim'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'csexton/trailertrash.vim'
