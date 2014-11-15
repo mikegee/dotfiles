@@ -27,9 +27,9 @@ let g:airline_powerline_fonts = 1
 " disable loading syntastic's rubocop checker by marking it as already loaded.
 let g:loaded_syntastic_ruby_rubocop_checker = 1
 
-let g:rspec_command = "!rspec {spec}"
+let g:rspec_command = "bundle exec rspec {spec}"
 
-" let g:rspec_command = "echom system('echo \"" . rspec_command . "\" >> ~/.wrench')"
+let g:rspec_command = "echom system('echo \"" . rspec_command . "\" >> ~/.wrench')"
 " map <Leader>fun :echom system('echo ./script/development_functional_spec >> ~/.wrench')<CR>
 
 " function! MapCR()
