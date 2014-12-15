@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'spec_helper'
 
-describe SomeThing do
+RSpec.describe SomeThing do
 
 
 end
