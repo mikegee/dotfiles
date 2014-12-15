@@ -48,6 +48,8 @@ let g:rspec_command = "echom system('echo \"" . rspec_command . "\" >> ~/.wrench
 map <Leader>let :s/\(\S*\)\s*=\(.*\)/let(:\1) {\2 }/<CR> \| :normal ==<CR>
 map <Leader>unlet :s/let(:\(\S*\))\s*{\(.*\) }/\1 =\2/<CR> \| :normal ==<CR>
 map <Leader>unlet :normal ^df:f)cf{ =$xx==
+map <Leader>et Iexpect(<ESC>A).to
+map <Leader>ete Iexpect(<ESC>A).to eq()<ESC>i
 
 map <Leader>q :quit <CR>
 
