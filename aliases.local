@@ -19,6 +19,9 @@ alias eg='cd epa_gateway'
 
 alias sk='bundle exec sidekiq'
 
+alias postgrestop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias postgrestart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+
 # https://gist.github.com/3698238
 alias war='~/bin/weekly_activity_report | less'
 
