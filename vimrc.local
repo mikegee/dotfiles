@@ -14,6 +14,8 @@ function! RequireIt()
 endfunction
 map <Leader>req :call RequireIt()<CR>
 
+unmap <Leader>a
+
 call matchadd('ColorColumn', '\%101v.\+', 100)
 
 let g:rubycomplete_classes_in_global = 1
