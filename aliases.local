@@ -46,6 +46,7 @@ alias stash='git stash'
 alias pop='git stash pop'
 alias unstage='git reset HEAD'
 alias br='git branch'
+alias master='git co master && git pull && git branch --merged | grep -v master | xargs -n 1 git branch -d'
 
 # Bundler
 alias bi="bundle install --jobs=4 --retry=3"
