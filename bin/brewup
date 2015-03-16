@@ -1,0 +1,3 @@
+#!/bin/bash
+
+brew remove "$1" --force && brew install "$1"
