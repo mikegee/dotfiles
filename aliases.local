@@ -1,3 +1,5 @@
+alias vpn="netExtender --username $USER --domain Innova --auto-reconnect --mtu 1500 --dns-prefer-remote vpn.covermymeds.com"
+
 alias vipb="vi ~/.pastebuffer"
 
 alias kick_ferret="ssh deployer@xanadunode1 'kill \`cat /pub/prod/ferret.covermymeds.com/shared/pids/clockwork.pid\`'"
