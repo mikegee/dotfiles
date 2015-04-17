@@ -2,4 +2,5 @@ log
 tags
 tmp
 *.pdf
+vendor
 .git/
