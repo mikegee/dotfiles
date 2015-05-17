@@ -49,7 +49,7 @@ alias br='git branch'
 alias master='git co master && git pull && git branch --merged | grep -v master | xargs -n 1 git branch -d'
 
 # Bundler
-alias bi="bundle install --jobs=4 --retry=3"
+alias bi="bundle install --jobs=4 --retry=3 | lolcat"
 alias be="bundle exec"
 alias bake="bundle exec rake"
 alias buby="bundle exec ruby"

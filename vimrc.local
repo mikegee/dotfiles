@@ -108,7 +108,7 @@ map Y y$
 map <Leader>bp Obinding.pry<ESC>:write<CR>
 
 function! BackgroundBundle()
-  let bundle         = 'bundle > log/bundle.log'
+  let bundle         = 'bundle install --jobs=4 --retry=3 > log/bundle.log'
   let growl_success  = 'growlnotify bundle -m completed'
   let growl_failure  = 'cat log/bundle.log | growlnotify bundle failed'
   let cmd            = bundle . ' && ' . growl_success . ' || ' . growl_failure
