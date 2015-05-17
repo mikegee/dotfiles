@@ -4,3 +4,5 @@ tmp
 *.pdf
 vendor
 .git/
+bower_components/
+node_modules/
