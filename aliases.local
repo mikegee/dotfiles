@@ -54,7 +54,7 @@ alias be="bundle exec"
 alias bake="bundle exec rake"
 alias buby="bundle exec ruby"
 
-alias beg="bundle exec guard"
+alias beg="bundle exec guard --clear"
 
 alias ber="bundle exec rspec"
 alias bec="bundle exec cucumber"
