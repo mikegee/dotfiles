@@ -1,3 +1,11 @@
+" ESC is hard to hit on my new keyboard
+imap kj <ESC>
+imap jk <ESC>
+
+" Quickly toggle single/double quoted strings
+nmap <silent> <leader>" cs'"
+nmap <silent> <leader>' cs"'
+
 " Color scheme
 colorscheme vividchalk
 highlight NonText guibg=#060606
