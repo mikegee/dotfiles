@@ -1,0 +1,9 @@
+# Rails server
+
+rs() {
+  if [ -e bin/rails ]; then
+    bin/rails server $@
+  else
+    script/rails server $@
+  fi
+}
