@@ -20,7 +20,11 @@ colors
 # enable colored output from ls, etc
 export CLICOLOR=1
 
-cdpath=( $HOME/Projects $HOME/Projects/cmm )
+cdpath=(
+  $HOME/Projects/cmm/vagrant/code
+  $HOME/Projects/cmm
+  $HOME/Projects
+)
 
 # Haskellz
 if [ -d "$HOME/.cabal/bin" ]; then
