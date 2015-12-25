@@ -22,6 +22,7 @@ alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --
 
 alias pm='cd postmaster'
 alias eg='cd epa_gateway'
+alias fp='cd vagrant/code/formpick'
 
 alias sk='bundle exec sidekiq'
 
@@ -39,6 +40,7 @@ alias add='git add --all'
 alias ci='git ci'
 alias co='git co'
 alias push='git push'
+alias gpf='git pf'
 alias pull='git pull'
 alias gp='git pull'
 alias gd='git diff'
