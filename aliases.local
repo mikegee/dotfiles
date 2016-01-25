@@ -1,3 +1,5 @@
+alias irb="pry"
+
 alias vup="cd vagrant && vagrant up"
 alias vssh="cd vagrant && vagrant ssh"
 alias vhalt="cd vagrant && vagrant halt"
