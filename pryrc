@@ -1,3 +1,6 @@
+require 'awesome_print'
+AwesomePrint.pry!
+
 PRYRC_MODEL_CACHE = Hash.new do |h, table|
   h[table] = Class.new(ActiveRecord::Base).tap { |m| m.table_name = table }
 end
