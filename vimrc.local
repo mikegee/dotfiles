@@ -1,3 +1,18 @@
+" focus/blur specs
+nmap <leader>focus $Fdhi,focus:true<esc>:write<cr>
+nmap <leader>blur :s/,focus:true//<cr>:write<cr>
+
+" JavaScript arguments.toArray
+nmap <leader>jsargs Ovar args = (arguments.length === 1?[arguments[0]]:Array.apply(null, arguments));<esc>
+
+" replace line with Ruby.eval(line)
+map <leader>rr :! ruby -rjson <&0<CR>
+
+" print JSON.parse '{"foo":"bar"}'
+
+" guard for gulp isn't working
+map <leader>g :!cd client; gulp build --skip-install<CR>
+
 " ESC is hard to hit on my new keyboard
 imap kj <ESC>
 imap jk <ESC>
