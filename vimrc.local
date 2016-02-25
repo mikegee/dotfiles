@@ -207,7 +207,7 @@ inoremap <s-tab> <c-n>
 " automatically remove trailing whitespace on save with trailertrash plugin
 augroup TrailerTrash
   autocmd!
-  autocmd BufWritePre * :Trim
+  autocmd BufWritePre * :TrailerTrim
 augroup END
 
 " don't show trailing whitespace when committing
