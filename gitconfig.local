@@ -20,4 +20,7 @@
   lg = !"git lg1"
 
 [core]
-  pager = less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2
+  pager = "diff-so-fancy | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2"
+
+[user]
+  useConfigOnly = true
