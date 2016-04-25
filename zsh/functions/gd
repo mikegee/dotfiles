@@ -1,0 +1,4 @@
+# fancier git diff
+gd() {
+  git diff --color $@ | diff-so-fancy | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2
+}
