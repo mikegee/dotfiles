@@ -1,3 +1,7 @@
+" splitjoin
+nmap <Leader>j :SplitjoinJoin<cr>
+nmap <Leader>s :SplitjoinSplit<cr>
+
 " focus/blur specs
 nmap <leader>focus $Fdhi,focus:true<esc>:write<cr>
 nmap <leader>blur :s/,focus:true//<cr>:write<cr>
