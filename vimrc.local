@@ -3,8 +3,8 @@ nmap <Leader>j :SplitjoinJoin<cr>
 nmap <Leader>s :SplitjoinSplit<cr>
 
 " focus/blur specs
-nmap <leader>focus $Fdhi,focus:true<esc>:write<cr>
-nmap <leader>blur :s/,focus:true//<cr>:write<cr>
+nmap <leader>fc $Fdhi,focus:true<esc>:write<cr>
+nmap <leader>bl :s/,focus:true//<cr>:write<cr>
 
 " JavaScript arguments.toArray
 nmap <leader>jsargs Ovar args = (arguments.length === 1?[arguments[0]]:Array.apply(null, arguments));<esc>
