@@ -1,3 +1,5 @@
+alias general_checklist="pbcopy < ~/Projects/cmm/general_checklist.md; echo Copied to PB!"
+
 alias irb="pry"
 
 alias vup="cd vagrant && vagrant up"
@@ -24,6 +26,7 @@ alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --
 
 alias pm='cd postmaster'
 alias eg='cd epa_gateway'
+alias dw='cd deploywizard'
 alias fp='cd vagrant/code/formpick'
 
 alias sk='bundle exec sidekiq'
