@@ -25,3 +25,6 @@
 
 [user]
   useConfigOnly = true
+
+[diff]
+  compactionHeuristic = true
