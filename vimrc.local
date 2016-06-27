@@ -1,3 +1,6 @@
+" easily poke passenger
+nmap <Leader>ttr :!touch tmp/restart.txt<cr><cr>
+
 " splitjoin
 nmap <Leader>j :SplitjoinJoin<cr>
 nmap <Leader>s :SplitjoinSplit<cr>
