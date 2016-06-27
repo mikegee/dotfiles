@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Bundle Install
+
+# only install from the "default", "development", and "test" groups
+without_groups=$(ruby -rbundler -e 'puts (Bundler.definition.groups - [:default, :development, :test]).join " "')
+bundle_args="--jobs=4 --retry=3"
+[ -n "$without_groups" ] && bundle_args="$bundle_args --without $without_groups"
+bundle install $bundle_args | lolcat
