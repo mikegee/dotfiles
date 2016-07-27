@@ -6,7 +6,7 @@ nmap <Leader>j :SplitjoinJoin<cr>
 nmap <Leader>s :SplitjoinSplit<cr>
 
 " focus/blur specs
-nmap <leader>fc ?\(it\\|specify\\|context\\|describe\)\><cr>$Fdhi,focus:true<esc>:write<cr>
+nmap <leader>fc ?\(it\\|specify\\|scenario\\|context\\|describe\\|feature\)\><cr>$Fdhi,focus:true<esc>:write<cr>
 nmap <leader>bl ?focus<cr>:s/,focus:true//<cr>:write<cr>
 
 " JavaScript arguments.toArray
