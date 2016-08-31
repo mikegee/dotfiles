@@ -24,10 +24,11 @@ alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-
 
 alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2' "
 
-alias pm='cd postmaster'
-alias eg='cd epa_gateway'
 alias dw='cd deploywizard'
-alias fp='cd vagrant/code/formpick'
+alias eg='cd epa_gateway'
+alias fm='cd faxmotron'
+alias fp='cd formpick'
+alias pm='cd postmaster'
 
 alias sk='bundle exec sidekiq'
 
