@@ -117,6 +117,16 @@ class PushEvent < Event
   end
 end
 
+class ReleaseEvent < Event
+  include LinkToRepo
+  def type
+    "released"
+  end
+  def content
+    payload.release.name
+  end
+end
+
 class GollumEvent < Event
   include LinkToRepo
   def type
@@ -158,7 +168,6 @@ UserEvents.new('mgee', back_to: Time.current.beginning_of_day - 1.week).each do 
   begin
     puts event.type.constantize.new(event).to_s
   rescue => _e
-    require 'pry'
-    binding.pry
+    require 'pry'; binding.pry
   end
 end
