@@ -1,3 +1,5 @@
+alias fail="tail -fn0"
+
 alias general_checklist="pbcopy < ~/Projects/cmm/general_checklist.md; echo Copied to PB!"
 
 alias irb="pry"
