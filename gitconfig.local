@@ -8,6 +8,9 @@
 [hub]
   host = git.innova-partners.com
 
+[commit]
+  verbose = true
+
 [log]
   abbrevCommit = true
 
