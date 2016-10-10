@@ -22,6 +22,7 @@
   lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
   lg = !"git lg1"
   append = commit --amend --no-edit
+  it = !git init && git commit -m \"root\" --allow-empty
 
 [core]
   pager = "diff-so-fancy | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2"
