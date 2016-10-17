@@ -4,9 +4,9 @@ alias general_checklist="pbcopy < ~/Projects/cmm/general_checklist.md; echo Copi
 
 alias irb="pry"
 
-alias vup="cd vagrant && vagrant up"
-alias vssh="cd vagrant && vagrant ssh"
-alias vhalt="cd vagrant && vagrant halt"
+alias vup="(cd vagrant && vagrant up)"
+alias vssh="(cd vagrant && vagrant ssh)"
+alias vhalt="(cd vagrant && vagrant halt)"
 
 alias vpn="netExtender --username $USER --domain Innova --auto-reconnect --mtu 1500 --dns-prefer-remote vpn.covermymeds.com"
 
