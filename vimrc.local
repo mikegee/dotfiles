@@ -1,3 +1,8 @@
+" Configure ack.vim to use The Silver Search
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev Ag Ack!
+cnoreabbrev Ack Ack!
+
 " Oscar FTW
 nmap <Leader>oscar I# they dont think it be like it is, but<cr><bs><bs>it do<cr>
 

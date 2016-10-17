@@ -1,7 +1,7 @@
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'ecomba/vim-ruby-refactoring'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'bling/vim-airline'
 Plug 'csexton/trailertrash.vim'
 Plug 'michaeljsmith/vim-indent-object'
