@@ -1,0 +1,12 @@
+#!/bin/bash
+
+APP_NAME="$(basename `pwd`)"
+
+if [[ -z "$*" ]]; then
+  COMMAND="bash --login"
+else
+  COMMAND="$*"
+fi
+
+cd ~/Projects/cmm/vagrant
+vagrant ssh -c "cd /vagrant/code/$APP_NAME && $COMMAND"
