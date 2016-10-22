@@ -1,0 +1,7 @@
+--database=postgresql
+--skip-action-cable
+--skip-action-mailer
+--skip-bundle
+--skip-javascript
+--skip-keeps
+--skip-test-unit
