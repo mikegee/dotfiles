@@ -31,4 +31,4 @@
   useConfigOnly = true
 
 [diff]
-  compactionHeuristic = true
+  indentHeuristic = true
