@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby -w
+
+pwd        = Dir.pwd
+image_name = File.basename(pwd)
+
+cmd = %W(
+  docker run
+  --interactive --rm --tty
+  --volume #{pwd}:/app
+  --volume #{ENV['HOME']}/.ssh:/root/.ssh
+  --workdir /app
+)
+
+while ARGV.first.include?('=')
+  cmd << '--env'
+  cmd << ARGV.shift
+end
+
+cmd << image_name
+cmd += ARGV
+
+# cmd += %w(sh -c)
+# cmd << "'eval $(ssh-agent) ; ssh-add /root/.ssh/id_rsa ; " + ARGV.join(' ') + "'"
+
+puts cmd.join(' ')
+exec(*cmd)
