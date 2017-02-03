@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'pry'
+  Pry.start
+rescue LoadError
+  require 'irb'
+  IRB.setup nil
+  IRB.conf[:MAIN_CONTEXT] = IRB::Irb.new.context
+  require 'irb/ext/multi-irb'
+  IRB.irb nil, self
+end
