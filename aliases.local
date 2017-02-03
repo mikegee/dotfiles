@@ -1,8 +1,17 @@
+alias guard='docker-compose run -e RSPEC_FAIL_FAST=true app bundle exec guard'
+alias drmi='docker images | grep none | awk '\''{ print $3 }'\''| xargs -n 1 docker rmi'
+alias drmps='docker ps -a | grep Exited | awk '\''{ print $1 }'\'' | xargs -n 1 docker rm'
+alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
+alias docker-cleanup='drmps && drmi && drmv'
+alias dbuild='docker build -t $(basename $(pwd)):latest .'
+
+alias portainer='docker run -d -v /var/run/docker.sock:/var/run/docker.sock -p 9000:9000 portainer/portainer'
+
+alias tcp-connect="nc -zw3"
+
 alias fail="tail -fn0"
 
 alias general_checklist="pbcopy < ~/Projects/cmm/general_checklist.md; echo Copied to PB!"
-
-alias irb="pry"
 
 alias vup="(cd vagrant && vagrant up)"
 alias vssh="(cd vagrant && vagrant ssh)"
@@ -72,7 +81,7 @@ alias ber="RSPEC_FAIL_FAST=true bundle exec rspec"
 alias bec="bundle exec cucumber"
 
 # Edit multiple files in tabs
-alias vi="vi -p"
+alias vi="vim -p"
 
 alias spring!="spring stop"
 
