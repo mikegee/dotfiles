@@ -35,6 +35,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export SHELL=/usr/local/bin/zsh
 
-ssh-add ~/.ssh/id_rsa 2>/dev/null
+ssh-add ~/.ssh/id_ed25519 ~/.ssh/id_rsa 2>/dev/null
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
