@@ -32,3 +32,6 @@
 
 [diff]
   indentHeuristic = true
+
+[rerere]
+  enabled = true

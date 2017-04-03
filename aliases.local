@@ -1,4 +1,7 @@
-alias guard='docker-compose run -e RSPEC_FAIL_FAST=true app bundle exec guard'
+alias k='kubectl'
+
+alias ap='ansible-playbook'
+
 alias drmi='docker images | grep none | awk '\''{ print $3 }'\''| xargs -n 1 docker rmi'
 alias drmps='docker ps -a | grep Exited | awk '\''{ print $1 }'\'' | xargs -n 1 docker rm'
 alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
@@ -69,6 +72,7 @@ alias pop='git stash pop'
 alias unstage='git reset HEAD'
 alias br='git branch'
 alias master='git co master && git pull && git branch --merged | grep -v master | xargs -n 1 git branch -d'
+alias production='git co production && git pull && git branch --merged | grep -v production | xargs -n 1 git branch -d'
 
 # Bundler
 alias be="bundle exec"
