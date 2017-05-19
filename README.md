@@ -64,7 +64,6 @@ Put your customizations in `~/dotfiles-local` appended with `.local`:
 * `~/dotfiles-local/aliases.local`
 * `~/dotfiles-local/git_template.local/*`
 * `~/dotfiles-local/gitconfig.local`
-* `~/dotfiles-local/gvimrc.local`
 * `~/dotfiles-local/psqlrc.local` (we supply a blank `.psqlrc.local` to prevent `psql` from
   throwing an error, but you should overwrite the file with your own copy)
 * `~/dotfiles-local/tmux.conf.local`
@@ -94,6 +93,24 @@ Your `~/dotfiles-local/vimrc.local` might look like this:
     colorscheme github
     highlight NonText guibg=#060606
     highlight Folded  guibg=#0A0A0A guifg=#9090D0
+
+If you don't wish to install a vim plugin from the default set of vim plugins in
+`.vimrc.bundles`, you can ignore the plugin by calling it out with `UnPlug` in
+your `~/.vimrc.bundles.local`.
+
+    " Don't install vim-scripts/tComment
+    UnPlug 'tComment'
+
+`UnPlug` can be used to install your own fork of a plugin or to install a shared
+plugin with different custom options.
+
+    " Only load vim-coffee-script if a Coffeescript buffer is created
+    UnPlug 'vim-coffee-script'
+    Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+
+    " Use a personal fork of vim-run-interactive
+    UnPlug 'vim-run-interactive'
+    Plug '$HOME/plugins/vim-run-interactive'
 
 To extend your `git` hooks, create executable scripts in
 `~/dotfiles-local/git_template.local/hooks/*` files.
@@ -166,8 +183,7 @@ What's in it?
 * Run many kinds of tests [from vim]([https://github.com/janko-m/vim-test)
 * Set `<leader>` to a single space.
 * Switch between the last two files with space-space.
-* Syntax highlighting for CoffeeScript, Textile, Cucumber, Haml, Markdown, and
-  HTML.
+* Syntax highlighting for Markdown, HTML, JavaScript, Ruby, Go, Elixir, more.
 * Use [Ag](https://github.com/ggreer/the_silver_searcher) instead of Grep when
   available.
 * Map `<leader>ct` to re-index [Exuberant Ctags](http://ctags.sourceforge.net/).
@@ -203,7 +219,6 @@ Shell aliases and scripts:
 
 * `b` for `bundle`.
 * `g` with no arguments is `git status` and with arguments acts like `git`.
-* `git-churn` to show churn for the files changed in the branch.
 * `migrate` for `rake db:migrate && rake db:rollback && rake db:migrate`.
 * `mcd` to make a directory and change into it.
 * `replace foo bar **/*.rb` to find and replace within a given list of files.
@@ -221,7 +236,7 @@ in this project.
 License
 -------
 
-dotfiles is copyright © 2009-2016 thoughtbot. It is free software, and may be
+dotfiles is copyright © 2009-2017 thoughtbot. It is free software, and may be
 redistributed under the terms specified in the [`LICENSE`] file.
 
 [`LICENSE`]: /LICENSE
