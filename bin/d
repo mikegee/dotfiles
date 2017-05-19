@@ -6,12 +6,13 @@ image_name = File.basename(pwd)
 cmd = %W(
   docker run
   --interactive --rm --tty
+  --publish-all
   --volume #{pwd}:/app
   --volume #{ENV['HOME']}/.ssh:/root/.ssh
   --workdir /app
 )
 
-while ARGV.first.include?('=')
+while ARGV.first.to_s.include?('=')
   cmd << '--env'
   cmd << ARGV.shift
 end

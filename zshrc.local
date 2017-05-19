@@ -38,3 +38,7 @@ export SHELL=/usr/local/bin/zsh
 ssh-add ~/.ssh/id_ed25519 ~/.ssh/id_rsa 2>/dev/null
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Sam added to improve ls colors
+export LSCOLORS=Exfxcxdxbxegedabagacad
+export PATH="/usr/local/opt/ruby@2.2/bin:$PATH"

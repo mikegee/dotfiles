@@ -2,6 +2,7 @@ alias k='kubectl'
 
 alias ap='ansible-playbook'
 
+alias dc='docker-compose run --rm app'
 alias drmi='docker images | grep none | awk '\''{ print $3 }'\''| xargs -n 1 docker rmi'
 alias drmps='docker ps -a | grep Exited | awk '\''{ print $1 }'\'' | xargs -n 1 docker rm'
 alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
@@ -39,6 +40,7 @@ alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-
 
 alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2' "
 
+alias rxr='cd rxresolution'
 alias dw='cd deploywizard'
 alias eg='cd epa_gateway'
 alias fm='cd faxmotron'
@@ -73,12 +75,15 @@ alias unstage='git reset HEAD'
 alias br='git branch'
 alias master='git co master && git pull && git branch --merged | grep -v master | xargs -n 1 git branch -d'
 alias production='git co production && git pull && git branch --merged | grep -v production | xargs -n 1 git branch -d'
+alias upstream-master='git co master && git fetch upstream && git merge --ff upstream/master && git branch --merged | grep -v master | xargs -n 1 git branch -d && git push origin'
+alias upstream-production='git co production && git fetch upstream && git merge --ff upstream/production && git branch --merged | grep -v production | xargs -n 1 git branch -d && git push origin'
 
 # Bundler
 alias be="bundle exec"
 alias bake="bundle exec rake"
 alias buby="bundle exec ruby"
 
+alias dcg="docker-compose run --rm -e RSPEC_FAIL_FAST=true app bundle exec guard --clear"
 alias beg="RSPEC_FAIL_FAST=true bundle exec guard --clear"
 
 alias ber="RSPEC_FAIL_FAST=true bundle exec rspec"
