@@ -7,7 +7,7 @@ alias drmi='docker images | grep none | awk '\''{ print $3 }'\''| xargs -n 1 doc
 alias drmps='docker ps -a | grep Exited | awk '\''{ print $1 }'\'' | xargs -n 1 docker rm'
 alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
 alias docker-cleanup='drmps && drmi && drmv'
-alias dbuild='docker build -t $(basename $(pwd)):latest .'
+alias dbuild='docker build -t $(basename $(pwd) | tr '[:upper:]' '[:lower:]'):latest .'
 
 alias portainer='docker run -d -v /var/run/docker.sock:/var/run/docker.sock -p 9000:9000 portainer/portainer'
 
