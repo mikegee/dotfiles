@@ -92,6 +92,8 @@ alias bec="bundle exec cucumber"
 # Edit multiple files in tabs
 alias vi="vim -p"
 
+alias fix-docker-time="docker run --rm --privileged alpine hwclock -s"
+
 alias spring!="spring stop"
 
 alias gi="gem install"
