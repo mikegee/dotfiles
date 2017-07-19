@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby -w
 
 pwd        = Dir.pwd
-image_name = File.basename(pwd)
+image_name = File.basename(pwd).downcase
 
 cmd = %W(
   docker run
