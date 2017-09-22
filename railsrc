@@ -1,7 +1,13 @@
---database=postgresql
---skip-action-cable
---skip-action-mailer
---skip-bundle
---skip-javascript
---skip-keeps
---skip-test-unit
+--database=postgresql \
+--skip-action-cable \
+--skip-action-mailer \
+--skip-bundle \
+--skip-coffee \
+--skip-keeps \
+--skip-puma \
+--skip-sprockets \
+--skip-system-test \
+--skip-test \
+--skip-turbolinks \
+--skip-yarn
+/* --skip-javascript */

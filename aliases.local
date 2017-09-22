@@ -41,6 +41,7 @@ alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-
 alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2' "
 
 alias rxr='cd rxresolution'
+alias inf='cd informer'
 alias dw='cd deploywizard'
 alias eg='cd epa_gateway'
 alias fm='cd faxmotron'
@@ -67,6 +68,7 @@ alias gpf='git pf'
 alias gcp='git cherry-pick'
 alias pull='git pull'
 alias rebase='git rebase'
+alias rmi='git rebase master -i'
 alias glg='git lg'
 alias pr='hub pull-request'
 alias stash='git stash'
