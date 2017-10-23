@@ -30,7 +30,7 @@ alias kick_ferret="ssh deployer@xanadunode1 'kill \`cat /pub/prod/ferret.covermy
 
 alias ttr='touch tmp/restart.txt; curl --silent https://$(basename $(pwd)).dev.cmmint.net/_ping > /dev/null'
 
-alias pstree='pstree $PPID'
+alias pstree='pstree -s iTerm2'
 
 alias pp='ruby -rap -rjson -e "ap JSON.parse(STDIN.read), indent: 2"'
 
