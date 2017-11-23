@@ -162,7 +162,8 @@ if !has("gui_mac")
 endif
 hi Identifier cterm=none
 " Commented numbers at the end are *old* 256 color values
-call s:hifg("Comment"        ,"#9933CC","DarkMagenta",34) " 92
+" call s:hifg("Comment"        ,"#9933CC","DarkMagenta",34) " 92
+call s:hifg("Comment"        ,"#9933CC","DarkMagenta",5) " 92
 " 26 instead?
 call s:hifg("Constant"       ,"#339999","DarkCyan",21) " 30
 call s:hifg("String"         ,"#66FF00","LightGreen",44,82) " 82
