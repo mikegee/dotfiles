@@ -7,6 +7,7 @@ cmd = %W(
   docker run
   --interactive --rm --tty
   --publish-all
+  --env RSPEC_FAIL_FAST=true
   --volume #{pwd}:/app
   --volume #{ENV['HOME']}/.ssh:/root/.ssh
   --workdir /app

@@ -21,6 +21,7 @@ alias vup="(cd vagrant && vagrant up)"
 alias vssh="(cd vagrant && vagrant ssh)"
 alias vhalt="(cd vagrant && vagrant halt)"
 alias vrc="vcd bin/rails console"
+alias vbundle="vcd bundle install --jobs=3"
 
 alias vpn="netExtender --username $USER --domain Innova --auto-reconnect --mtu 1500 --dns-prefer-remote vpn.covermymeds.com"
 
@@ -40,6 +41,7 @@ alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-
 
 alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2' "
 
+alias pc='cd portacopia'
 alias rxr='cd rxresolution'
 alias inf='cd informer'
 alias dw='cd deploywizard'
