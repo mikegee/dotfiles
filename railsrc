@@ -8,6 +8,7 @@
 --skip-sprockets \
 --skip-system-test \
 --skip-test \
+--skip-system-test \
 --skip-turbolinks \
 --skip-yarn
 /* --skip-javascript */
