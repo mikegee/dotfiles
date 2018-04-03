@@ -41,6 +41,7 @@ alias less='less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-
 
 alias ag="ag --pager 'less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen --chop-long-lines --tabs=2' "
 
+alias sh='cd ScriptHero'
 alias pc='cd portacopia'
 alias rxr='cd rxresolution'
 alias inf='cd informer'
