@@ -1,0 +1,3 @@
+--fail-fast
+--format=progress
+--no-profile

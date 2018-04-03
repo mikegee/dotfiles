@@ -87,10 +87,10 @@ alias be="bundle exec"
 alias bake="bundle exec rake"
 alias buby="bundle exec ruby"
 
-alias dcg="docker-compose run --rm -e RSPEC_FAIL_FAST=true app bundle exec guard --clear"
-alias beg="RSPEC_FAIL_FAST=true bundle exec guard --clear"
+alias dcg="docker-compose run --rm app bundle exec guard --clear"
+alias beg="bundle exec guard --clear"
 
-alias ber="RSPEC_FAIL_FAST=true bundle exec rspec"
+alias ber="bundle exec rspec"
 alias bec="bundle exec cucumber"
 
 # Edit multiple files in tabs
