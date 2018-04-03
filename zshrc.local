@@ -47,4 +47,3 @@ export DIRENV_LOG_FORMAT=
 # Sam added to improve ls colors
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
-export PATH="/usr/local/opt/ruby@2.2/bin:$PATH"
