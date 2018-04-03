@@ -1,3 +1,9 @@
+
+let g:ale_linters = {
+\   'ruby': [],
+\}
+
+
 " Configure ack.vim to use The Silver Search
 let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev Ag Ack!
