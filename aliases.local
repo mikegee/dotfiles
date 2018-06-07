@@ -2,7 +2,6 @@ alias k='kubectl'
 
 alias ap='ansible-playbook'
 
-alias dc='docker-compose run --rm app'
 alias drmi='docker images | grep none | awk '\''{ print $3 }'\''| xargs -n 1 docker rmi'
 alias drmps='docker ps -a | grep Exited | awk '\''{ print $1 }'\'' | xargs -n 1 docker rm'
 alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
@@ -88,7 +87,7 @@ alias be="bundle exec"
 alias bake="bundle exec rake"
 alias buby="bundle exec ruby"
 
-alias dcg="docker-compose run --rm app bundle exec guard --clear"
+alias dcg="dc bundle exec guard --clear"
 alias beg="bundle exec guard --clear"
 
 alias ber="bundle exec rspec"

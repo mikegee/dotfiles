@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby -w
+
+require 'yaml'
+
+app_name = YAML.load_file("docker-compose.yml").fetch("services").keys.fetch(0)
+
+cmd = %W(docker-compose run --rm --name #{app_name} #{app_name}) + ARGV
+puts cmd.join(' ')
+exec(*cmd)
