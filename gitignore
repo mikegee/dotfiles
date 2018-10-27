@@ -14,3 +14,4 @@ tmp/**/*
 vendor
 .guard_history
 .pry_history
+.rspec-local
