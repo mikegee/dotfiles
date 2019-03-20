@@ -1,18 +1,19 @@
-Plug 'mattn/webapi-vim'
-Plug 'mattn/gist-vim'
-Plug 'ecomba/vim-ruby-refactoring'
-Plug 'mileszs/ack.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'csexton/trailertrash.vim'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'godlygeek/tabular'
-Plug 'dapplebeforedawn/vim-ruby-buffer'
-Plug 'dapplebeforedawn/vim-rails-buffer'
-Plug 'tommcdo/vim-exchange'
-Plug 'tpope/vim-unimpaired'
-Plug 'AndrewRadev/switch.vim'
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-dispatch'
-Plug 'rhysd/vim-crystal'
-Plug 'RRethy/vim-illuminate'
+" Plug 'mattn/webapi-vim'                   " audit: don't use
+" Plug 'mattn/gist-vim'                     " audit: don't use
+Plug 'ecomba/vim-ruby-refactoring'          " audit: required
+Plug 'mileszs/ack.vim'                      " audit: required
+Plug 'vim-airline/vim-airline'              " audit: required
+Plug 'csexton/trailertrash.vim'             " audit: required
+Plug 'michaeljsmith/vim-indent-object'      " audit: required
+Plug 'godlygeek/tabular'                    " audit: required
+" Plug 'dapplebeforedawn/vim-ruby-buffer'   " audit: don't use
+" Plug 'dapplebeforedawn/vim-rails-buffer'  " audit: don't use
+Plug 'tommcdo/vim-exchange'                 " audit: required
+" Plug 'tpope/vim-unimpaired'               " audit: probably unused. I think I used to toggle line highlight one and off for JonC
+Plug 'AndrewRadev/switch.vim'               " audit: required
+Plug 'AndrewRadev/splitjoin.vim'            " audit: required
+Plug 'airblade/vim-gitgutter'               " audit: required
+" Plug 'tpope/vim-dispatch'                 " audit: don't use
+" Plug 'rhysd/vim-crystal'                  " audit: vim-polyglot replaces
+Plug 'RRethy/vim-illuminate'                " audit: required
+Plug 'sheerun/vim-polyglot'                 " audit: all the languages!

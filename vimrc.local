@@ -4,9 +4,9 @@ let g:Illuminate_ftHighlightGroups = {
 " use `watdis` to identify syntax things to add to that list ^
 nmap <Leader>watdis :echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "name")<CR>
 
-let g:ale_linters = {
-\   'ruby': [],
-\}
+" let g:ale_linters = {
+" \   'ruby': [],
+" \}
 
 " Configure ack.vim to use The Silver Search
 let g:ackprg = 'ag --vimgrep --smart-case'
