@@ -21,3 +21,4 @@ tmp/**/*
 .guard_history
 .pry_history
 .rspec-local
+.ash_history

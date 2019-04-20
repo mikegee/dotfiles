@@ -1,5 +1,6 @@
 # put Homebrew in the PATH
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/ruby@2.5/bin:$PATH"
 
 autoload -z edit-command-line
 zle -N edit-command-line
@@ -43,6 +44,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 eval "$(direnv hook zsh)"
 # quiet direnv noise
 export DIRENV_LOG_FORMAT=
+
+# Enable zsh-completions fanciness
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Sam added to improve ls colors
 export LSCOLORS=Exfxcxdxbxegedabagacad
