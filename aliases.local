@@ -81,7 +81,6 @@ alias br='git branch'
 alias master='git co master && git pull && git branch --merged | grep -v master | xargs -n 1 git branch -d'
 alias production='git co production && git pull && git branch --merged | grep -v production | xargs -n 1 git branch -d'
 alias upstream-master='git co master && git fetch upstream && git merge --ff upstream/master && git branch --merged | grep -v master | xargs -n 1 git branch -d && git push origin'
-alias upstream-production='git co production && git fetch upstream && git merge --ff upstream/production && git branch --merged | grep -v production | xargs -n 1 git branch -d && git push origin'
 
 # Bundler
 alias be="bundle exec"
