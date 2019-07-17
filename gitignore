@@ -5,7 +5,6 @@
 .DS_Store
 .bundle
 .byebug_history
-.env
 .git/
 /bower_components/
 /log
@@ -22,3 +21,5 @@ tmp/**/*
 .pry_history
 .rspec-local
 .ash_history
+.cache/
+.lesshst
