@@ -1,6 +1,6 @@
 # put Homebrew in the PATH
 export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/ruby@2.5/bin:$PATH"
+export PATH="/usr/local/Cellar/ruby/2.6.5/bin:$PATH"
 
 autoload -z edit-command-line
 zle -N edit-command-line
