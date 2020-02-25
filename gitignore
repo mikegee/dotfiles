@@ -19,6 +19,7 @@ tmp/**/*
 
 .guard_history
 .pry_history
+.pry.d/
 .rspec-local
 .ash_history
 .cache/
