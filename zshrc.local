@@ -22,7 +22,6 @@ colors
 export CLICOLOR=1
 
 cdpath=(
-  $HOME/Projects/cmm/vagrant/code
   $HOME/Projects/cmm
   $HOME/Projects
 )
