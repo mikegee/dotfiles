@@ -122,8 +122,6 @@ augroup NewSpecFile
   autocmd BufNewFile *_spec.rb read ~/.vim/skeleton_spec.rb | 0d
 augroup END
 
-let g:github_api_url = "http://git.innova-partners.com/api/v3"
-
 map <Leader>k :cg quickfix.out \| cwindow <CR>
 
 " convert single to double quotes
