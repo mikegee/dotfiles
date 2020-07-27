@@ -71,7 +71,7 @@ alias stash='git stash --include-untracked'
 alias pop='git stash pop'
 alias unstage='git restore --staged'
 alias br='git branch'
-alias master='git co master && git pull && git branch --merged | grep -v master | xargs -n 1 git branch -d'
+alias master="git co master && git pull --ff-only && git branch --merged | grep -v ' master$' | xargs -n 1 git branch -d"
 alias production='git co production && git pull && git branch --merged | grep -v production | xargs -n 1 git branch -d'
 alias upstream-master='git co master && git fetch upstream && git merge --ff upstream/master && git branch --merged | grep -v master | xargs -n 1 git branch -d && git push origin'
 
