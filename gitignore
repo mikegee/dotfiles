@@ -24,3 +24,4 @@ tmp/**/*
 .ash_history
 .cache/
 .lesshst
+.vscode

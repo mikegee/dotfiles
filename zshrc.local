@@ -1,6 +1,9 @@
 # put Homebrew in the PATH
 export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/Cellar/ruby/2.6.5/bin:$PATH"
+# put a better ruby in the PATH
+# export PATH="/usr/local/Cellar/ruby/2.6.5/bin:$PATH"
+# put VS Code in the PATH
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
 autoload -z edit-command-line
 zle -N edit-command-line
