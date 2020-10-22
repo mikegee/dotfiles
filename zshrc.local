@@ -1,7 +1,7 @@
 # put Homebrew in the PATH
 export PATH="/usr/local/bin:$PATH"
 # put a better ruby in the PATH
-# export PATH="/usr/local/Cellar/ruby/2.6.5/bin:$PATH"
+export PATH="/usr/local/opt/ruby@2.6/bin:$PATH"
 # put VS Code in the PATH
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
@@ -36,7 +36,7 @@ fi
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export SHELL=/usr/local/bin/zsh
+# export SHELL=/usr/local/bin/zsh
 
 ssh-add ~/.ssh/id_ed25519 ~/.ssh/id_rsa 2>/dev/null
 
