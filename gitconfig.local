@@ -5,9 +5,6 @@
 [github]
   user = mikegee
 
-[hub]
-  host = git.innova-partners.com
-
 [commit]
   verbose = true
 
