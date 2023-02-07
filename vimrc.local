@@ -16,7 +16,7 @@ cnoreabbrev Ack Ack!
 " Oscar FTW
 nmap <Leader>oscar I# they dont think it be like it is, but<cr><bs><bs>it do<cr>
 
-" easily poke passenger
+" restart rails dev server
 nmap <Leader>ttr :!touch tmp/restart.txt<cr><cr>
 
 " splitjoin
