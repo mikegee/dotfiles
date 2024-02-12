@@ -1,11 +1,1 @@
---database=postgresql \
---skip-action-cable \
---skip-bundle \
---skip-coffee \
---skip-keeps \
---skip-puma \
---skip-sprockets \
---skip-test \
---skip-turbolinks \
---skip-yarn
-/* --skip-javascript */
+--database=postgresql

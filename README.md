@@ -214,8 +214,17 @@ configuration:
 - Add trusted binstubs to the `PATH`.
 - Load the ASDF version manager.
 
+[Rails](https://rubyonrails.org)
+
+- Adds [railsrc][] with `--database=postgresql`. If you need to use another
+  database, you can override this value like so: `rails new my_app --database=mysql` or
+`rails new my_app --no_rc`
+
+[railsrc]: https://github.com/rails/rails/blob/7f7f9df8641e35a076fe26bd097f6a1b22cb4e2d/railties/lib/rails/generators/rails/app/USAGE#L5C1-L7
+
 Shell aliases and scripts:
 
+- `...` for quicker navigation to the parent's parent directory.
 - `b` for `bundle`.
 - `g` with no arguments is `git status` and with arguments acts like `git`.
 - `migrate` for `bin/rails db:migrate db:rollback && bin/rails db:migrate db:test:prepare`.
