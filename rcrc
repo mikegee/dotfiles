@@ -1,3 +1,3 @@
 DOTFILES_DIRS="$HOME/Projects/dotfiles-local $HOME/Projects/dotfiles"
-EXCLUDES="*.md LICENSE"
+EXCLUDES="*.md LICENSE CODEOWNERS"
 COPY_ALWAYS="git_template/HEAD"
